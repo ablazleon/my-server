@@ -1,0 +1,118 @@
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1596647189.3269668,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-my-server-master-tv84m-hn9mb[0m
+{"level":"info","ts":1596647197.772727,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*********/my-server.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1596647197.7728486,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1596647197.81458,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0805 17:06:44.110714      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+E0805 17:06:44.522057      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0805 17:06:44.525207      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0004] Built cross stage deps: map[]                
+[36mINFO[0m[0004] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0005] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0006] Executing 3 build triggers                   
+[36mINFO[0m[0006] Checking for cached layer gcr.io/striking-joy-285411/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66... 
+[36mINFO[0m[0007] No cached layer found for cmd COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0007] cmd: EXPOSE                                  
+[36mINFO[0m[0007] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0007] Unpacking rootfs as cmd COPY requirements.txt /usr/src/app/ requires it. 
+[36mINFO[0m[0025] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0025] Resolving 1 paths                            
+[36mINFO[0m[0025] Taking snapshot of files...                  
+[36mINFO[0m[0025] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0025] Taking snapshot of full filesystem...        
+[36mINFO[0m[0025] Pushing layer gcr.io/striking-joy-285411/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66 to cache now 
+[36mINFO[0m[0026] Resolving 27638 paths                        
+[36mINFO[0m[0043] cmd: /bin/sh                                 
+[36mINFO[0m[0043] args: [-c pip install --no-cache-dir -r requirements.txt] 
+[36mINFO[0m[0043] Running: [/bin/sh -c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 20.2.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0045] Taking snapshot of full filesystem...        
+[36mINFO[0m[0045] Resolving 28054 paths                        
+[36mINFO[0m[0048] Pushing layer gcr.io/striking-joy-285411/cache:26208b704f381cfc1f456d1b1b9697de2e61930f2b836f1a4480488b7e191354 to cache now 
+[36mINFO[0m[0048] COPY . /usr/src/app                          
+[36mINFO[0m[0048] Resolving 114 paths                          
+[36mINFO[0m[0048] Taking snapshot of files...                  
+[36mINFO[0m[0048] COPY requirements.txt .                      
+[36mINFO[0m[0048] Resolving 1 paths                            
+[36mINFO[0m[0048] Taking snapshot of files...                  
+[36mINFO[0m[0048] Pushing layer gcr.io/striking-joy-285411/cache:f376983bf4fc988f00f22ab232574d85ae4a2da4b3e4268c30d9b1596f233508 to cache now 
+[36mINFO[0m[0048] ENV PORT 8080                                
+[36mINFO[0m[0048] Pushing layer gcr.io/striking-joy-285411/cache:885300f21076eff9ad9d464697ee755e0895f873902282b70566ed40ba95fd23 to cache now 
+[36mINFO[0m[0048] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0048] EXPOSE 8080                                  
+[36mINFO[0m[0048] cmd: EXPOSE                                  
+[36mINFO[0m[0048] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0048] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0048] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0048] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0048] CMD ["app.py"]                               
+[36mINFO[0m[0048] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/my-server to an unshallow repository
+Generating change log from git ref 2db63786fd1399cc8f18fa8a25bcbaf002fc7c6b => a3b74dcd7d50894f7f91c3653a9bda6af090f3bd
+Associating user ********* in users.jenkins.io with email *********@gmail.com to git GitProvider user with login *********-1 as emails match
+Adding label jenkins.io/git-github-userid=*********-1 to user ********* in users.jenkins.io
+Associating user ********* in users.jenkins.io with email *********@gmail.com to git GitProvider user with login *********-1 as emails match
+Adding label jenkins.io/git-github-userid=*********-1 to user ********* in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for *********/my-server and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*********/my-server/releases/tag/v0.0.1
+generated: /workspace/source/charts/my-server/templates/release.yaml
+Created Release my-server-0-0-1 resource in namespace **
+Updating PipelineActivity *********-my-server-master-1 with version 0.0.1
+Updated PipelineActivities *********-my-server-master-1 with release notes URL: https://github.com/*********/my-server/releases/tag/v0.0.1
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file my-server-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mablazleon-my-server-master-tv84m-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app my-server version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-myinfra-staging/pull/5
+Added label updatebot to Pull Request https://github.com/*********/environment-myinfra-staging/pull/5
+got git provider status pending from PR https://github.com/*********/environment-myinfra-staging/pull/5
+Pull Request https://github.com/*********/environment-myinfra-staging/pull/5 is merged at sha fb258d3adae15cc2d589f640d8a6528de0097538
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names my-server, **-my-server, **-staging-my-server
